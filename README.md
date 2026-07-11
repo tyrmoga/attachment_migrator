@@ -1,6 +1,8 @@
 # Attachment Migrator
 
-Migrates file attachments from one Odoo instance to another. Handles employee (`hr.employee`) and contact (`res.partner`) attachments with progress tracking, retry, and duplicate resolution.
+We did an Odoo 12 to 18 Migration via Opening balances and data imports. We needed a way to bring in attachments from the old verison to the newer version too. In response to that, I developed this program. It was intended to handle version 12 to 18, but any Odoo version that uses XMLRPC should work really. Only two models are covered by this implementation, but the patterns can be expanded to work with any module
+
+Handles employee (`hr.employee`) and contact (`res.partner`) attachments with progress tracking, retry, and duplicate resolution. A frontend service is available at [frontend](https://github.com/tyrmoga/attachment_migrator-ui), but the whole thing can be run via Postman.
 
 ## What it does
 
